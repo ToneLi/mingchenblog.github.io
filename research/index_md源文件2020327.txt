@@ -1,0 +1,86 @@
+---
+title: research
+date: 2019-11-02 11:03:16
+---
+
+
+# <font color=blue size=3>Short Text Classiﬁcation via Knowledge powered Attention with Similarity Matrix based CNN (2019)</font> 
+
+<center>According to the previous logic, I still want to use KG to solve some problems about NLP. This work was done in the last semester of my university, research progress is slow, because I have to prepare some files for graduation. I have submitted my work to EMNLP2019, WSDM2020, ECAI2020. I received many reviews of peer reviewers and gone ahead with my experiments. It's a growing process!! </center>
+
+## <font color=green size=2> The abstract of my paper</font> 
+	
+<center>Short text is becoming more and more popular on the web, such as Chat Message, SMS and Product Reviews.Accurately classifying short text is an important and challenging task. A number of studies have difficulties in addressing this problem because of the word ambiguity and data sparsity. To address this issue, we propose a knowledge powered attention with similarity matrix based convolutional neural network (KASM) model, which can compute comprehensive information by utilizing the knowledge and deep neural network. We use knowledge graph (KG) to enrich the semantic representation of short text, specially, the information of parent-entity is introduced in our model. Meanwhile, we consider the word interaction in the literal-level between short text and the representation of label, and utilize similarity matrix based convolutional neural network (CNN) to extract it. For the purpose of measuring the importance of knowledge, we introduce the attention mechanisms to choose the important information. Experimental results on five standard datasets show that our model significantly outperforms state-of-the-art methods.</center>
+	
+<center> If you have any questions and want to learn my work, please contact me.</center>
+
+<div align=center>
+<img src="7.png" width="80%" height="80%" />
+<div align=left>
+	
+
+# <font color=blue size=3>Multi-Fusion Chinese WordNet (MCW) : Compound of Machine Learning and Manual Correction (2019)</font>
+
+
+<center>This paper was received by 20th International Conference on Computational Linguistics and Intelligent Text Processing (CICLing2019). CICLing is one of leading NLP conferences, ranked 7th in Computational Linguistics by Google Metrics and B by the CORE list. I did this work in 2018.</center>
+	
+## <font color=green size=2> What is your purpose of building the MCW?</font>
+	
+<\center>I wanted to use Chinese knowledge graph (CKG) to solve some problems about NLP, but there was no opened CKG, and our team didn't have the licence to use HowNet, Knowledge Graph Cognitive Intelligence from Fudan University. Under the guidance of my tutor (his research direction is KG), I decided to research wordnet, because many KGs' structure in today are based on wordnet. During the course of study, I found that there is no complete Chinese wordnet, I wanted to do something about it. So the research started. In this work, we applied MCW into two NLP tasks, Chinese word sense disambiguation and Word similarity calculation (based IC). You can see the construction process and the experiments in my paper. If you have any questions and want to learn my work, please contact me. </center>
+
+## <font color=green size=2>The abstract of my paper</font>
+	
+<center>Princeton WordNet (PWN) is a lexicon-semantic network based on cognitive linguistics, which promotes the development of natural language processing. Based on PWN, five Chinese wordnets have been developed to solve the problems of syntax and semantic. They include: Northeastern University Chinese WordNet (NEW), Sinica Bilingual Ontological WordNet (BOW), Southeast University Chinese WordNet(SEW),Taiwan University Chinese WordNet(CWN),ChineseOpen WordNet (COW). By using them, we found that these word networks have low accuracy and coverage, and cannot completely portray the semantic network of PWN. So we decided to make a new Chinese wordnet called Multi-Fusion Chinese Wordnet (MCW) to make up those shortcomings. The key idea is to extend the SEW with the help of Oxford bilingual dictionary and Xinhua bilingual dictionary, and then correct it. More specifically, we used machine learning and manual adjustment in our corrections. Two standards were formulated to help our work. We conducted experiments on three tasks including relatedness calculation, word similarity and word sense disambiguation for the comparison of lemma’s accuracy, at the same time, coverage also was compared. The results indicate that MCW can benefit from coverage and accuracy via our method. However, it still has room for improvement, especially with lemmas.In the future, we will continue to enhance the accuracy of MCW and expand the concepts in it. </center>
+	
+
+
+# <font color=blue size=3>Solving the Chinese physical probelm based on deep learning and knowledge graph (2019)</font>
+
+
+<center>This paper was received by 7th International Conference on Information Technology in Education (ICITE 2019). This is my first publication in English at the undergraduate level. It's a tough progress to publish this paper, including how to write a sicence paper in English, how to describe my work in a better way. Although  there are some shortcomings in this paper, I have learned many skills about NLP.</center>
+
+## <font color=green size=2>A short introduction about this work.</font>
+
+<center>Our original intention is to use the knowledge graph (KG) to solve the Chinese physical problem. We only propose an idea about how to solve it.</center>
+	
+## <font color=green size=2> What's your plan ? (how to sovle it?)</font>
+
+<center>We all believe that the KG have the reasoning ability, and use KG can get the finally answer about given problem. In there, we should first transform the physical probelm into tuple, then use KG to search for the concepts of tuple. At the last, we use the reasoning ability to get the finally answer. You may see this progress is very simple, but there are some issues need to be settled. I will describe them in the below,</center>
+
+## <font color=green size=2> How to construct your physical KG?</font>
+	
+<center>I know this KG about special field, we can extract some concepts in the structured data, such as Baidu Encyclopedia, and build a relation about two relevant concepts. Otherwise, we can use some DL tools to extract the tuples in problem. Since this is a preliminary job, we choose to build the KG by manual. Every KG must have a structure, you can see it in my paper.</center>
+
+## <font color=green size=2> How to extract tuple in the physical problem?</font>
+
+<center>I want to say this is a very difficult problem, it involves many downstream NLP tasks, such as Anaphora Resolution, Name Entity Recognition, and Relation Recognition. If we can solve these problems in an exact way, KG can be built. Ok, in my work, I think if we can know the template about every sentence, we can solve the problem about Anaphora Resolution. I know you are very confused, I will give you an excample. 时间为 11hour( time is 11hour), it belongs the template B in my work. Now I have known the template about it, next I can use the rule (this situation should add a subject in tuple). Finally, we can get [ '大巴车 ','时间', '11', 'hour']. In this progress I used TextCNN to get the category of the template in each sentence. You can see it in detail in my paper.</center>
+
+## <font color=green size=2>  The abstract of my paper.</font>
+
+<center>In recent years, problem solving, automatic proof and human-like test-tasking have become a hot spot of research. This paper focus on the study of solving physical problem in Chinese. Based on the analysis of physical corpus, it is found that the physical problem are made up of ntuples which contain concepts and relations between concepts, and the n-tuples can be expressed in the form of UP-graph (The graph of understanding problem), which is the semantic expression of physical problem. UP-graph is the base of problem solving which is generated by using physical knowledge graph (PKG). However, current knowledge graph is hard to be used in problem solving, because it cannot store methods for solving problem. So this paper presents a model of PKG which contains concepts and relations, in the model, concepts and relations are split into terms and unique IDs, and methods can be easily stored in the PKG as concepts. Based on the PKG, DKP-solving is proposed which is a novel approach for solving physical problem. The approach combines rules, statistical methods and knowledge reasoning effectively by integrating the deep learning and knowledge graph. The experimental results over the data set of real physical text indicate that DKP-solving is effective in physical problem solving. </center>
+
+<div align=center>
+ 
+<img src="6.png" width="80%" height="80%" /> 
+<div align=left>
+
+# <font color=blue size=3>An intelligent collection system for test paper (2017)</font>
+
+<center>This work was finished by our team in QFNU when I was a sophomore student(Before learning NLP). I really miss that time. I miss those who participate in this work and places we have stayed. Lab's name is 116, the members in our lab are Zhou Zili, Zhang Ning, Hu Yantian, Rong dezhi, SU zheng. The team disbanded, but I can not forget them. 
+Ok Let me introduce this work in the next part.
+
+We filed for a patent of this system. In the first, we wanted to make a system to recognize the score in test paper, then let the machine to analyze these data. We all believe that this system can help teacher understand the student in the best way. This is a challenging work! So, the first problem is how to make computer recognize the score in paper. Facing this issue, we used OpenCV to segment the score, such as "13" turns to "1" and "3". Second, we trained a classifier by using CNN to recognize these numbers. The picture number will become digital number. The second problem is how to store these data. We used Mysql as our database. The last problem is to analysis the score about student and generate the grade report, there are many novel algorithms can help me achieve it. Such as: Sum, Average, Count, etc. I found that Markdown can not reload the video (introduce this system), so I cut some pictures about our system in the below, and put the full video in my github (you can click the top right cover in my blog, and find "demo_last.mp4" in the "source" file. I know you may very confused about this system, it does not matter, you can contact with me. I was responsible for building the CNN model and database. Other questions, such as how to segment picture by OpenCV, I will deliver your question to my team member. Thanks!)</center>
+
+<div align=center>
+<img src="1.png" width="50%" height="50%" /> 
+
+<img src="2.png" width="50%" height="50%" /> 
+
+<img src="3.png" width="50%" height="50%" /> 
+
+<img src="4.png" width="50%" height="50%" /> 
+
+My team in QFNU,
+<img src="5.png" width="50%" height="50%" />
+
+

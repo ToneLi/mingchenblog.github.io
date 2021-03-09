@@ -1,0 +1,59 @@
+---
+title: Me
+date: 2019-11-02 16:28:11
+
+---
+<img src="1.png" width="30%" height="30%" />
+
+Li Mingchen 
+
+Email: lmingchen96@gmail.com
+
+His research interests include information retrieval, text classification, question answer, knowledge graph, machine translation. He always considers how to use knowledge graph and deep neural network (CNN, LSTM, attention, transformer, etc) to sovle the problems about NLP. You can learn his work in Part "research". He is a sunshine boy! In daily life, he likes cooking, climbing, basketball. He has a  motto: "I will never give up, even if there is only little hope." Becauce he does it all the time! 
+
+**<font color=blue size=3>Professional Skills:</font>**
+
+Python, C, TensorFlow, MySQL, MongoDB, Neo4j, LaTeX, VISIO, NoteExpress, Linux
+
+**<font color=blue size=3>Research Interests:</font>**
+
+Deep Learning, Machine Learning, Knowledge Graph, Text Classiﬁcation, Question Answer, Information Retrieval, Machine translation.
+
+**<font color=blue size=3>Education:</font>**
+
+Master Candicate ---- Georgia State University, Georgia, 2020.09- 
+
+Advisor: [Prof.Jonathan Shihao Ji](https://grid.cs.gsu.edu/~sji/)
+
+Bachelor ---- Qufu Normal University, China, 2015.09–2019.07. 
+
+Advisor: Prof.Zili Zhou
+
+
+		
+**<font color=blue size=3>Honors:</font>**
+
+-- University Scholarships, QFNU. 2018–2019 
+
+-- Excellent Graduate Student of QFNU. 2018–2019 
+ 
+-- University Scholarships,QFNU. 2017–2018 
+
+-- (Third-Class Award of China Undergraduate Mathematical Contest in Modeling(CUMCM) of Shandong Province). 2017–2018 
+
+-- University Scholarships, QFNU. 2016–2017
+
+-- "Maker China, Smart China" National innovation application competition--Traffic line time prediction competition-top5%(54/2020). 2016–2017
+
+-- Successful Participant of Mathematical Contest in Modeling (MCM). 2016–2017
+
+-- University Scholarships, QFNU. 2015–2016
+
+-- The ﬁrst prize in Electronic Design Contest,QFNU. 2015–2016
+
+
+**<font color=blue size=3>Hobbies:</font>**
+
+-- Climbing, road cycling, cooking.
+
+-- I am good at table tennis and basketball, I’m a member of our college basketball team.
