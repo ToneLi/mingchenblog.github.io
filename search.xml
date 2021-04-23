@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Finish my first work in Complex KGQA</title>
+      <link href="2021/04/24/Finish-my-first-work-in-Complex-KGQA/"/>
+      <url>2021/04/24/Finish-my-first-work-in-Complex-KGQA/</url>
+      
+        <content type="html"><![CDATA[<p><font color=green>ST-BERT: A BERT-based framework for Complex Question Answering over Knowledge Graph</font></p><p>There are two types of complexity need to be addressed in answering complex question over knowledge graph (Complex KGQA), question with multi-hop relations and question with constraints. In this work, we handle both types of complexity. </p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Sentence-BERT</title>
       <link href="2021/03/11/Sentence-BERT/"/>
       <url>2021/03/11/Sentence-BERT/</url>
