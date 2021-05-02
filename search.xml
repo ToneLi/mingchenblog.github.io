@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Source of link prediction / knowledge completion</title>
+      <link href="2021/05/02/Source-of-link-prediction-knowledge-completion/"/>
+      <url>2021/05/02/Source-of-link-prediction-knowledge-completion/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://github.com/xinguoxia/KGE">1: Some papers on Knowledge Graph Embedding(KGE)</a></p><p><a href="https://paperswithcode.com/task/link-prediction">2: benchmarks on link prediction</a></p><p><a href="https://github.com/wangbo9719/StAR_KGC">3: Structure-Augmented Text Representation Learning for Efficient Knowledge Graph Completion</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>The best one in ComplexWebQuestions LeaderBoard is 70.4</title>
       <link href="2021/04/27/The-best-one-in-ComplexWebQuestions-LeaderBoard-is-70-4/"/>
       <url>2021/04/27/The-best-one-in-ComplexWebQuestions-LeaderBoard-is-70-4/</url>
