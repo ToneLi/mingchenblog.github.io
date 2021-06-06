@@ -29,10 +29,6 @@
 <meta property="article:author" content="Li Mingchen">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Chen&#39;s Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
   
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -52,7 +48,7 @@
     <nav class="nav">
          <div class="nav-left">
             <a href="/" class="nav-item" style="font-size: 20px;">
-              <span class="logo">Mingchen Li</span>'s Blog
+              <span class="logo"></span>'s Blog
             </a>
          </div>
         <div class="nav-center is-hidden position-relative" id="search_container">
@@ -68,30 +64,6 @@
                 <i class="fa fa-search" aria-hidden="true"></i>
             </a>
             
-            <a class="nav-item" href="/">
-                Home
-            </a>
-            
-            <a class="nav-item" href="/me">
-                Me
-            </a>
-            
-            <a class="nav-item" href="/research">
-                Research
-            </a>
-            
-            <a class="nav-item" href="/publication">
-                Publication
-            </a>
-            
-            <a class="nav-item" href="/Note">
-                Note
-            </a>
-            
-            <a class="nav-item" href="/contact">
-                Contact
-            </a>
-            
         </div>
         <span class="nav-toggle" id="navMenuDropdown">
             <span></span>
@@ -99,30 +71,6 @@
             <span></span>
         </span>
         <div class="navbar-menu position-absolute full-width content-box is-hidden-desktop is-flex flex-column center" style="top: 100%;">
-            
-            <a class="nav-item flex-1" href="/">
-                Home
-            </a>
-            
-            <a class="nav-item flex-1" href="/me">
-                Me
-            </a>
-            
-            <a class="nav-item flex-1" href="/research">
-                Research
-            </a>
-            
-            <a class="nav-item flex-1" href="/publication">
-                Publication
-            </a>
-            
-            <a class="nav-item flex-1" href="/Note">
-                Note
-            </a>
-            
-            <a class="nav-item flex-1" href="/contact">
-                Contact
-            </a>
             
         </div>
     </nav>
@@ -175,8 +123,8 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://s3.ax1x.com/2020/12/27/r5e3cV.png">
-                <span style="padding:0 10px;"> <span class="sub-title">By</span> Mingchen Li</span>
+                <img class="post-avatar" src="">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> </span>
                 <span class="post-date sub-title">at: 2020-01-06</span>
             </div>
             
@@ -193,25 +141,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import tensorflow as tf</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def gen():</span><br><span class="line">    yield (np.array([5,6,7]), np.array(1))</span><br><span class="line">    yield (np.array([8,4,3,2,6,7]), np.array(0))</span><br><span class="line"></span><br><span class="line">data &#x3D; tf.data.Dataset.from_generator(gen, output_types&#x3D;(tf.int32, tf.int32))</span><br><span class="line">data &#x3D; data.apply(tf.contrib.data.shuffle_and_repeat(buffer_size&#x3D;2))</span><br><span class="line">data &#x3D; data.padded_batch(10, padded_shapes&#x3D;([5], []))#data.padded_batch(batch_size, padded_shapes&#x3D;max_shape),其中max_shape是您想要的填充张量的大小。</span><br><span class="line"></span><br><span class="line">iterator &#x3D; tf.data.Iterator.from_structure(data.output_types, data.output_shapes)</span><br><span class="line">batch &#x3D; iterator.get_next()</span><br><span class="line">init_op &#x3D; iterator.make_initializer(data)</span><br><span class="line"></span><br><span class="line">with tf.Session() as sess:</span><br><span class="line">    sess.run(init_op)</span><br><span class="line">    batch_out &#x3D; sess.run(batch)</span><br><span class="line">    print(batch_out)</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">使用dataset中的padded_batch方法来进行，参数padded_shapes #指明每条记录中各成员要pad成的形状，成员若是scalar，则用[]</span><br><span class="line">，若是list，则用[mx_length]，若是array，则用[d1,...,dn]，若是string 则用 (),</span><br><span class="line">假如各成员的顺序是scalar数据、list数据、array数据，string 数据， 则padded_shapes&#x3D;([], [mx_length], [d1,...,dn]，())；该方法的函数说明如下：</span><br><span class="line"></span><br><span class="line">padded_batch(</span><br><span class="line">    batch_size,</span><br><span class="line">    padded_shapes,</span><br><span class="line">    padding_values&#x3D;None    #默认使用各类型数据的默认值，一般使用时可忽略该项</span><br><span class="line">再如[None]  为默认填充为到所有句子的最大长度</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br></pre></td></tr></table></figure>
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -231,7 +160,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/undefined.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>

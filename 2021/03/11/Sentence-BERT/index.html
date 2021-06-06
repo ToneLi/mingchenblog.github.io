@@ -29,10 +29,6 @@
 <meta property="article:author" content="Li Mingchen">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Chen&#39;s Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
   
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -52,7 +48,7 @@
     <nav class="nav">
          <div class="nav-left">
             <a href="/" class="nav-item" style="font-size: 20px;">
-              <span class="logo">Mingchen Li</span>'s Blog
+              <span class="logo"></span>'s Blog
             </a>
          </div>
         <div class="nav-center is-hidden position-relative" id="search_container">
@@ -68,30 +64,6 @@
                 <i class="fa fa-search" aria-hidden="true"></i>
             </a>
             
-            <a class="nav-item" href="/">
-                Home
-            </a>
-            
-            <a class="nav-item" href="/me">
-                Me
-            </a>
-            
-            <a class="nav-item" href="/research">
-                Research
-            </a>
-            
-            <a class="nav-item" href="/publication">
-                Publication
-            </a>
-            
-            <a class="nav-item" href="/Note">
-                Note
-            </a>
-            
-            <a class="nav-item" href="/contact">
-                Contact
-            </a>
-            
         </div>
         <span class="nav-toggle" id="navMenuDropdown">
             <span></span>
@@ -99,30 +71,6 @@
             <span></span>
         </span>
         <div class="navbar-menu position-absolute full-width content-box is-hidden-desktop is-flex flex-column center" style="top: 100%;">
-            
-            <a class="nav-item flex-1" href="/">
-                Home
-            </a>
-            
-            <a class="nav-item flex-1" href="/me">
-                Me
-            </a>
-            
-            <a class="nav-item flex-1" href="/research">
-                Research
-            </a>
-            
-            <a class="nav-item flex-1" href="/publication">
-                Publication
-            </a>
-            
-            <a class="nav-item flex-1" href="/Note">
-                Note
-            </a>
-            
-            <a class="nav-item flex-1" href="/contact">
-                Contact
-            </a>
             
         </div>
     </nav>
@@ -175,8 +123,8 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://s3.ax1x.com/2020/12/27/r5e3cV.png">
-                <span style="padding:0 10px;"> <span class="sub-title">By</span> Mingchen Li</span>
+                <img class="post-avatar" src="">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> </span>
                 <span class="post-date sub-title">at: 2021-03-11</span>
             </div>
             
@@ -192,25 +140,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">This is a simple application for sentence embeddings: semantic search</span><br><span class="line"></span><br><span class="line">We have a corpus with various sentences. Then, for a given query sentence,</span><br><span class="line">we want to find the most similar sentence in this corpus.</span><br><span class="line"></span><br><span class="line">This script outputs for various queries the top 5 most similar sentences in the corpus.</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">from sentence_transformers import SentenceTransformer, util</span><br><span class="line">import torch</span><br><span class="line"></span><br><span class="line">embedder &#x3D; SentenceTransformer(&#39;paraphrase-distilroberta-base-v1&#39;)</span><br><span class="line"></span><br><span class="line"># Corpus with example sentences</span><br><span class="line">corpus &#x3D; [&#39;A man is eating food.&#39;,</span><br><span class="line">          &#39;A man is eating a piece of bread.&#39;,</span><br><span class="line">          &#39;The girl is carrying a baby.&#39;,</span><br><span class="line">          &#39;A man is riding a horse.&#39;,</span><br><span class="line">          &#39;A woman is playing violin.&#39;,</span><br><span class="line">          &#39;Two men pushed carts through the woods.&#39;,</span><br><span class="line">          &#39;A man is riding a white horse on an enclosed ground.&#39;,</span><br><span class="line">          &#39;A monkey is playing drums.&#39;,</span><br><span class="line">          &#39;A cheetah is running behind its prey.&#39;</span><br><span class="line">          ]</span><br><span class="line">corpus_embeddings &#x3D; embedder.encode(corpus, convert_to_tensor&#x3D;True)</span><br><span class="line"></span><br><span class="line"># Query sentences:</span><br><span class="line">queries &#x3D; [&#39;A man is eating pasta.&#39;, &#39;Someone in a gorilla costume is playing a set of drums.&#39;, &#39;A cheetah chases prey on across a field.&#39;]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Find the closest 5 sentences of the corpus for each query sentence based on cosine similarity</span><br><span class="line">top_k &#x3D; min(5, len(corpus))</span><br><span class="line">for query in queries:</span><br><span class="line">    query_embedding &#x3D; embedder.encode(query, convert_to_tensor&#x3D;True)</span><br><span class="line"></span><br><span class="line">    # We use cosine-similarity and torch.topk to find the highest 5 scores</span><br><span class="line">    cos_scores &#x3D; util.pytorch_cos_sim(query_embedding, corpus_embeddings)[0]</span><br><span class="line">    top_results &#x3D; torch.topk(cos_scores, k&#x3D;top_k)</span><br><span class="line"></span><br><span class="line">    print(&quot;\n\n&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;\n\n&quot;)</span><br><span class="line">    print(&quot;Query:&quot;, query)</span><br><span class="line">    print(&quot;\nTop 5 most similar sentences in corpus:&quot;)</span><br><span class="line"></span><br><span class="line">    for score, idx in zip(top_results[0], top_results[1]):</span><br><span class="line">        print(corpus[idx], &quot;(Score: &#123;:.4f&#125;)&quot;.format(score))</span><br><span class="line"></span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    # Alternatively, we can also use util.semantic_search to perform cosine similarty + topk</span><br><span class="line">    hits &#x3D; util.semantic_search(query_embedding, corpus_embeddings, top_k&#x3D;5)</span><br><span class="line">    hits &#x3D; hits[0]      #Get the hits for the first query</span><br><span class="line">    for hit in hits:</span><br><span class="line">        print(corpus[hit[&#39;corpus_id&#39;]], &quot;(Score: &#123;:.4f&#125;)&quot;.format(hit[&#39;score&#39;]))</span><br><span class="line">    &quot;&quot;&quot;</span><br></pre></td></tr></table></figure>
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -230,7 +159,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/undefined.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>

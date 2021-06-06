@@ -29,10 +29,6 @@
 <meta property="article:author" content="Li Mingchen">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Chen&#39;s Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
   
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -52,7 +48,7 @@
     <nav class="nav">
          <div class="nav-left">
             <a href="/" class="nav-item" style="font-size: 20px;">
-              <span class="logo">Mingchen Li</span>'s Blog
+              <span class="logo"></span>'s Blog
             </a>
          </div>
         <div class="nav-center is-hidden position-relative" id="search_container">
@@ -68,30 +64,6 @@
                 <i class="fa fa-search" aria-hidden="true"></i>
             </a>
             
-            <a class="nav-item" href="/">
-                Home
-            </a>
-            
-            <a class="nav-item" href="/me">
-                Me
-            </a>
-            
-            <a class="nav-item" href="/research">
-                Research
-            </a>
-            
-            <a class="nav-item" href="/publication">
-                Publication
-            </a>
-            
-            <a class="nav-item" href="/Note">
-                Note
-            </a>
-            
-            <a class="nav-item" href="/contact">
-                Contact
-            </a>
-            
         </div>
         <span class="nav-toggle" id="navMenuDropdown">
             <span></span>
@@ -99,30 +71,6 @@
             <span></span>
         </span>
         <div class="navbar-menu position-absolute full-width content-box is-hidden-desktop is-flex flex-column center" style="top: 100%;">
-            
-            <a class="nav-item flex-1" href="/">
-                Home
-            </a>
-            
-            <a class="nav-item flex-1" href="/me">
-                Me
-            </a>
-            
-            <a class="nav-item flex-1" href="/research">
-                Research
-            </a>
-            
-            <a class="nav-item flex-1" href="/publication">
-                Publication
-            </a>
-            
-            <a class="nav-item flex-1" href="/Note">
-                Note
-            </a>
-            
-            <a class="nav-item flex-1" href="/contact">
-                Contact
-            </a>
             
         </div>
     </nav>
@@ -175,8 +123,8 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://s3.ax1x.com/2020/12/27/r5e3cV.png">
-                <span style="padding:0 10px;"> <span class="sub-title">By</span> Mingchen Li</span>
+                <img class="post-avatar" src="">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> </span>
                 <span class="post-date sub-title">at: 2020-06-05</span>
             </div>
             
@@ -193,25 +141,6 @@
 <h3 id="evaluate-in-EmbedKGQA-Embedding"><a href="#evaluate-in-EmbedKGQA-Embedding" class="headerlink" title="evaluate in EmbedKGQA-Embedding"></a><font color=orange>evaluate in EmbedKGQA-Embedding</font></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">def evaluate(self, model, data):</span><br><span class="line">    model.eval()</span><br><span class="line">    hits &#x3D; []</span><br><span class="line">    ranks &#x3D; []</span><br><span class="line">    for i in range(10):</span><br><span class="line">        hits.append([])</span><br><span class="line"></span><br><span class="line">    test_data_idxs &#x3D; self.get_data_idxs(data)  # (9432, 20, 8804), (12249, 159, 1716), (10191, 101, 2806),</span><br><span class="line">    er_vocab &#x3D; self.get_er_vocab(self.get_data_idxs(d.data))  #(1780, 137): [7722, 7716, 13499, 10708]</span><br><span class="line"></span><br><span class="line">    print(&quot;Number of data points: %d&quot; % len(test_data_idxs))</span><br><span class="line">    for i in tqdm(range(0, len(test_data_idxs), self.batch_size)):</span><br><span class="line">        data_batch, _ &#x3D; self.get_batch(er_vocab, test_data_idxs, i)</span><br><span class="line">        e1_idx &#x3D; torch.LongTensor(data_batch[:,0])</span><br><span class="line">        r_idx &#x3D; torch.LongTensor(data_batch[:,1])</span><br><span class="line">        e2_idx &#x3D; torch.tensor(data_batch[:,2])</span><br><span class="line"></span><br><span class="line">        if self.cuda:</span><br><span class="line">            e1_idx &#x3D; e1_idx.cuda()</span><br><span class="line">            r_idx &#x3D; r_idx.cuda()</span><br><span class="line">            e2_idx &#x3D; e2_idx.cuda()</span><br><span class="line">        predictions &#x3D; model.forward(e1_idx, r_idx)   # 调用训练好的model</span><br><span class="line">        # following lines commented means RAW evaluation (not filtered)</span><br><span class="line">        for j in range(data_batch.shape[0]):</span><br><span class="line">            filt &#x3D; er_vocab[(data_batch[j][0], data_batch[j][1])]  # tail answer #(1780, 137): tail:[7722, 7716, 13499, 10708]</span><br><span class="line">            target_value &#x3D; predictions[j,e2_idx[j]].item() # e2_idx[j] is a number ,such as 56, predictions[0,4]&#x3D;tensor(0.3505, grad_fn&#x3D;&lt;SelectBackward&gt;), predictions[0,4].items()&#x3D;0.3505</span><br><span class="line">            predictions[j, filt] &#x3D; 0.0</span><br><span class="line">            predictions[j, e2_idx[j]] &#x3D; target_value</span><br><span class="line">    #</span><br><span class="line">        sort_values, sort_idxs &#x3D; torch.sort(predictions, dim&#x3D;1, descending&#x3D;True)</span><br><span class="line"></span><br><span class="line">        sort_idxs &#x3D; sort_idxs.cpu().numpy()</span><br><span class="line"></span><br><span class="line">        for j in range(data_batch.shape[0]):</span><br><span class="line">            # sort_idxs[j]: [10416  9084  4488 ...  5365 11847  9656]</span><br><span class="line">            rank &#x3D; np.where(sort_idxs[j]&#x3D;&#x3D;e2_idx[j].item())[0][0]  #  预测  相等就是0， 不等就是空</span><br><span class="line">            ranks.append(rank+1)</span><br><span class="line"></span><br><span class="line">            for hits_level in range(10):</span><br><span class="line">                if rank &lt;&#x3D; hits_level:</span><br><span class="line">                    hits[hits_level].append(1.0)</span><br><span class="line">                else:</span><br><span class="line">                    hits[hits_level].append(0.0)</span><br><span class="line">    hitat10 &#x3D; np.mean(hits[9])</span><br><span class="line">    hitat3 &#x3D; np.mean(hits[2])</span><br><span class="line">    hitat1 &#x3D; np.mean(hits[0])</span><br><span class="line">    meanrank &#x3D; np.mean(ranks)</span><br><span class="line">    mrr &#x3D; np.mean(1.&#x2F;np.array(ranks))</span><br><span class="line">    print(&#39;Hits @10: &#123;0&#125;&#39;.format(hitat10))</span><br><span class="line">    print(&#39;Hits @3: &#123;0&#125;&#39;.format(hitat3))</span><br><span class="line">    print(&#39;Hits @1: &#123;0&#125;&#39;.format(hitat1))</span><br><span class="line">    print(&#39;Mean rank: &#123;0&#125;&#39;.format(meanrank))</span><br><span class="line">    print(&#39;Mean reciprocal rank: &#123;0&#125;&#39;.format(mrr))</span><br><span class="line">    return [mrr, meanrank, hitat10, hitat3, hitat1]</span><br></pre></td></tr></table></figure>
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -231,7 +160,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/undefined.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>

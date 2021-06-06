@@ -29,10 +29,6 @@
 <meta property="article:author" content="Li Mingchen">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Chen&#39;s Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
   
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -52,7 +48,7 @@
     <nav class="nav">
          <div class="nav-left">
             <a href="/" class="nav-item" style="font-size: 20px;">
-              <span class="logo">Mingchen Li</span>'s Blog
+              <span class="logo"></span>'s Blog
             </a>
          </div>
         <div class="nav-center is-hidden position-relative" id="search_container">
@@ -68,30 +64,6 @@
                 <i class="fa fa-search" aria-hidden="true"></i>
             </a>
             
-            <a class="nav-item" href="/">
-                Home
-            </a>
-            
-            <a class="nav-item" href="/me">
-                Me
-            </a>
-            
-            <a class="nav-item" href="/research">
-                Research
-            </a>
-            
-            <a class="nav-item" href="/publication">
-                Publication
-            </a>
-            
-            <a class="nav-item" href="/Note">
-                Note
-            </a>
-            
-            <a class="nav-item" href="/contact">
-                Contact
-            </a>
-            
         </div>
         <span class="nav-toggle" id="navMenuDropdown">
             <span></span>
@@ -99,30 +71,6 @@
             <span></span>
         </span>
         <div class="navbar-menu position-absolute full-width content-box is-hidden-desktop is-flex flex-column center" style="top: 100%;">
-            
-            <a class="nav-item flex-1" href="/">
-                Home
-            </a>
-            
-            <a class="nav-item flex-1" href="/me">
-                Me
-            </a>
-            
-            <a class="nav-item flex-1" href="/research">
-                Research
-            </a>
-            
-            <a class="nav-item flex-1" href="/publication">
-                Publication
-            </a>
-            
-            <a class="nav-item flex-1" href="/Note">
-                Note
-            </a>
-            
-            <a class="nav-item flex-1" href="/contact">
-                Contact
-            </a>
             
         </div>
     </nav>
@@ -175,8 +123,8 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://s3.ax1x.com/2020/12/27/r5e3cV.png">
-                <span style="padding:0 10px;"> <span class="sub-title">By</span> Mingchen Li</span>
+                <img class="post-avatar" src="">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> </span>
                 <span class="post-date sub-title">at: 2021-01-31</span>
             </div>
             
@@ -191,25 +139,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">k_choices &#x3D; [1, 3, 5, 8, 10, 12, 15, 20, 50, 100]</span><br><span class="line"></span><br><span class="line">k_to_accuracies&#x3D;&#123;1: [0.263, 0.257, 0.264, 0.278, 0.266], 3: [0.257, 0.263, 0.273, 0.282, 0.27], 5: [0.265, 0.275, 0.295, 0.298, 0.284], 8: [0.272, 0.295, 0.284, 0.298, 0.29], 10: [0.272, 0.303, 0.289, 0.292, 0.285], 12: [0.271, 0.305, 0.285, 0.289, 0.281], 15: [0.26, 0.302, 0.292, 0.292, 0.285], 20: [0.268, 0.293, 0.291, 0.287, 0.286], 50: [0.273, 0.291, 0.274, 0.267, 0.273], 100: [0.261, 0.272, 0.267, 0.26, 0.267]&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">for k in k_choices:</span><br><span class="line">    accuracies &#x3D; k_to_accuracies[k]</span><br><span class="line"></span><br><span class="line">    plt.scatter([k] * len(accuracies), accuracies)</span><br><span class="line">#</span><br><span class="line">accuracies_mean &#x3D; np.array([np.mean(v) for k,v in sorted(k_to_accuracies.items())])</span><br><span class="line">#accuracies_mean--[0.2656 0.269  0.2834 0.2878 0.2882 0.2862 0.2862 0.285  0.2756 0.2654]</span><br><span class="line"></span><br><span class="line">accuracies_std &#x3D; np.array([np.std(v) for k,v in sorted(k_to_accuracies.items())])</span><br><span class="line">print(accuracies_std)#点代表平均值，上下长条线的范围代表标准差</span><br><span class="line">plt.errorbar(k_choices, accuracies_mean, yerr&#x3D;accuracies_std)</span><br><span class="line">plt.title(&#39;Cross-validation on k&#39;)</span><br><span class="line">plt.xlabel(&#39;k&#39;)</span><br><span class="line">plt.ylabel(&#39;Cross-validation accuracy&#39;)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;-----another excample--------&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">plt.errorbar(x&#x3D;[1, 2, 3, 4], y&#x3D;[1, 3, 3, 4], yerr&#x3D;[1, 2, 3, 4])</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -229,7 +158,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/undefined.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>

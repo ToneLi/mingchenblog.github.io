@@ -1,0 +1,35 @@
+---
+title: Me
+date: 2019-11-02 16:28:11
+
+---
+<img src="1.png" width="30%" height="30%" />
+
+Li Mingchen 
+
+Email: lmingchen96@gmail.com or mli33@student.gsu.edu
+
+His research interests include text classification, question answer, text matching, knowledge graph. He always considers how to use knowledge graph and deep learning to sovle the problems about NLP. After 2020.5, he mainly focus on the multi-hop question answering based on knowledge graph. You can learn his work in Part "research". He is a sunshine boy! In daily life, he likes cooking, climbing, basketball. 
+**<font color=blue size=3>Professional Skills:</font>**
+
+Python, C, TensorFlow, Pytorch, MySQL, MongoDB, Neo4j, LaTeX, VISIO, NoteExpress, Linux
+
+**<font color=blue size=3>Research Interests:</font>**
+
+Deep Learning, Machine Learning, Knowledge Graph, Text Classiﬁcation, Question Answer, Information Retrieval, Machine translation.
+
+**<font color=blue size=3>Education:</font>**
+
+Graduate Research Assistant ---- Georgia State University (GSU), Georgia, 2021.1- 
+
+Advisor: [Prof.Jonathan Shihao Ji](https://grid.cs.gsu.edu/~sji/)
+
+Undergraduate education ---- Qufu Normal University, China, 2015.09--2019.07
+
+Advisor: [Prof.Zili Zhou](https://www.linkedin.com/in/%E5%AD%90%E5%8A%9B-%E5%91%A8-ab6b93a5/)
+
+**<font color=blue size=3>Hobbies:</font>**
+
+-- Climbing, road cycling, cooking.
+
+-- I am good at table tennis and basketball.

@@ -29,10 +29,6 @@
 <meta property="article:author" content="Li Mingchen">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Chen&#39;s Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
   
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -52,7 +48,7 @@
     <nav class="nav">
          <div class="nav-left">
             <a href="/" class="nav-item" style="font-size: 20px;">
-              <span class="logo">Mingchen Li</span>'s Blog
+              <span class="logo"></span>'s Blog
             </a>
          </div>
         <div class="nav-center is-hidden position-relative" id="search_container">
@@ -68,30 +64,6 @@
                 <i class="fa fa-search" aria-hidden="true"></i>
             </a>
             
-            <a class="nav-item" href="/">
-                Home
-            </a>
-            
-            <a class="nav-item" href="/me">
-                Me
-            </a>
-            
-            <a class="nav-item" href="/research">
-                Research
-            </a>
-            
-            <a class="nav-item" href="/publication">
-                Publication
-            </a>
-            
-            <a class="nav-item" href="/Note">
-                Note
-            </a>
-            
-            <a class="nav-item" href="/contact">
-                Contact
-            </a>
-            
         </div>
         <span class="nav-toggle" id="navMenuDropdown">
             <span></span>
@@ -99,30 +71,6 @@
             <span></span>
         </span>
         <div class="navbar-menu position-absolute full-width content-box is-hidden-desktop is-flex flex-column center" style="top: 100%;">
-            
-            <a class="nav-item flex-1" href="/">
-                Home
-            </a>
-            
-            <a class="nav-item flex-1" href="/me">
-                Me
-            </a>
-            
-            <a class="nav-item flex-1" href="/research">
-                Research
-            </a>
-            
-            <a class="nav-item flex-1" href="/publication">
-                Publication
-            </a>
-            
-            <a class="nav-item flex-1" href="/Note">
-                Note
-            </a>
-            
-            <a class="nav-item flex-1" href="/contact">
-                Contact
-            </a>
             
         </div>
     </nav>
@@ -175,8 +123,8 @@
             </h1>
             
             <div class="is-flex align-center">
-                <img class="post-avatar" src="https://s3.ax1x.com/2020/12/27/r5e3cV.png">
-                <span style="padding:0 10px;"> <span class="sub-title">By</span> Mingchen Li</span>
+                <img class="post-avatar" src="">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> </span>
                 <span class="post-date sub-title">at: 2019-12-11</span>
             </div>
             
@@ -189,25 +137,6 @@
             <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">import jieba</span><br><span class="line">from sklearn.feature_extraction.text import TfidfTransformer</span><br><span class="line">from sklearn.feature_extraction.text import CountVectorizer</span><br><span class="line">from sklearn.naive_bayes import MultinomialNB</span><br><span class="line">root_path&#x3D;os.getcwd()  # this dic</span><br><span class="line">print(root_path)</span><br><span class="line"># 以空格来划分每一个分词</span><br><span class="line">def preprocess(sentence):</span><br><span class="line">    text_with_space &#x3D; &quot;&quot;</span><br><span class="line"></span><br><span class="line">    textcute &#x3D; jieba.cut(sentence)</span><br><span class="line">    for word in textcute:</span><br><span class="line">        text_with_space +&#x3D; word + &quot; &quot;</span><br><span class="line">        # print(text_with_space)</span><br><span class="line">    return text_with_space</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def loadtrainset(path):</span><br><span class="line"></span><br><span class="line">    processed_textset &#x3D; []</span><br><span class="line">    allclasstags &#x3D; []</span><br><span class="line">    with open(path,&quot;r&quot;,encoding&#x3D;&quot;utf-8&quot;) as fr:</span><br><span class="line">        for line in fr.readlines():</span><br><span class="line">            line&#x3D;line.strip().split(&quot;\t&quot;)</span><br><span class="line"></span><br><span class="line">            processed_textset.append(preprocess(line[0]))</span><br><span class="line">            allclasstags.append(line[1])</span><br><span class="line">    return processed_textset,allclasstags</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__&#x3D;&#x3D;&quot;__main__&quot;:</span><br><span class="line"></span><br><span class="line">    train_data, classtags_list&#x3D;loadtrainset(&quot;5_class_etc.txt&quot;)#&#123;&#39;体育&#39;, &#39;法律&#39;, &#39;经济&#39;, &#39;道德&#39;, &#39;文化&#39;, &#39;政治&#39;&#125;</span><br><span class="line">    print(classtags_list)</span><br><span class="line">    count_vector &#x3D; CountVectorizer()</span><br><span class="line">    vecot_matrix &#x3D; count_vector.fit_transform(train_data)</span><br><span class="line">    # print(train_tfidf)  # vecot_matrix输入，得到词频矩阵</span><br><span class="line">    train_tfidf &#x3D; TfidfTransformer().fit_transform(vecot_matrix)</span><br><span class="line"></span><br><span class="line">    clf &#x3D; MultinomialNB().fit(train_tfidf, classtags_list)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    true&#x3D;[]</span><br><span class="line">    predict&#x3D;[]</span><br><span class="line"></span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    test_class.txt:</span><br><span class="line">    用6-70年代的眼光看中国，是你们的无知，是愚蠢，以为打压诬陷就能击垮我过世界冠军，愚蠢至极！	政治</span><br><span class="line">    孙杨好样的！！！我喜欢大白杨 但我知道中国人也喜欢他。。。孙杨你不是一个人在比赛…中国人民为你骄傲 加油 外国人鄙视👎👎👎👎鄙视 同意点赞[赞]	政治</span><br><span class="line">    正义可能会迟到！但绝对不会缺席！只要你是对的，无惧任何不公！你的背后有强大的祖国，有我们每一个中国人的支持！！！	政治</span><br><span class="line">    </span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    with open(&quot;test_class.txt&quot;,&quot;r&quot;,encoding&#x3D;&quot;utf-8&quot;) as fr:</span><br><span class="line">        for line in fr.readlines():</span><br><span class="line">            line&#x3D;line.strip().split(&quot;\t&quot;)</span><br><span class="line">            true.append(line[1])</span><br><span class="line">            text&#x3D;line[0]</span><br><span class="line">            new_count_vector &#x3D; count_vector.transform([text])</span><br><span class="line">            new_tfidf &#x3D; TfidfTransformer().fit_transform(new_count_vector)</span><br><span class="line">            train_tfidf &#x3D; TfidfTransformer().fit_transform(vecot_matrix)</span><br><span class="line">            predict_result &#x3D; clf.predict(new_tfidf)</span><br><span class="line">            # predict_result &#x3D; clf.predict(test_tfidf)</span><br><span class="line">            # print(predict_result)</span><br><span class="line">            predict.append(predict_result[0])</span><br><span class="line">    print(&quot;true&quot;,true)</span><br><span class="line">    print(&quot;predict&quot;,predict)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
         </div>
         <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
             
             
         </div>
@@ -227,7 +156,7 @@
 <!-- theme.block_highlight -->
 <!-- we do not guarantee the char sequences spell right, usr himself do it -->
 
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<link rel="stylesheet" href="/css/undefined.css">
 
 <script src="/js/highlight.min.js"></script>
 <script type="text/javascript"> hljs.initHighlightingOnLoad();</script>

@@ -1,0 +1,23 @@
+---
+title: My publication
+date: 2019-11-02 11:03:31
+
+---
+
+
+**<font color=blue size=3>Paper:</font>**
+
+-- <font color=orange size=3>Mingchen Li</font>, Zili Zhou, Yanna Wang. Multi-Fusion Chinese WordNet (MCW) : Compound of Machine Learning and Manual Correction. CICling 2019. [Arxiv](https://arxiv.org/abs/2002.01761)
+
+
+-- <font color=orange size=3>Mingchen Li</font>, Zili Zhou, Yanna Wang. Solving the Chinese physical problem based on deep learning and knowledge graph. Dhinaharan Nagamalai et al. (Eds) : ACSIT, SIPM, ICITE, ITCA - 2019.pp. 103–115, 2019. © CS & IT-CSCP 2019. [Paper](https://scholar.google.com.hk/scholar?hl=en&as_sdt=0,5&q=Solving+the+Chinese+physical+problem+based+on+deep+learning+and+knowledge+graph)
+
+-- Wanwan Li, Zili Zhou, <font color=orange size=3>Mingchen Li</font>. Pulse-wave Continuous Blood Pressure Measurement Based on Deep Learning [J].Electronic Technology (China), 2017(3).
+
+
+
+**<font color=blue size=3>Patents for Inventions:</font>**
+
+-- Yanna Wang, Zili Zhou, <font color=orange size=3>Mingchen Li</font>, Yantian Hu, Zheng Su, Dezhi Rong, Ning Zhang. An intelligent collection system for test paper score, 2017.
+
+-- Zili Zhou, Yanna Wang, Jinghu Zhang, Ning Zhang, <font color=orange size=3>Mingchen Li</font>, Dezhi Rong. An intelligent hardware control method driven by knowledge graph, 2017.
